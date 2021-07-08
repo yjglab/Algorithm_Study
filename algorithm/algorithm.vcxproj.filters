@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="05_merge_sort.c">
+    <ClCompile Include="06_heap_sort.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
