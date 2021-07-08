@@ -15,7 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="06_heap_sort.c">
+    <ClCompile Include="07_counting_sort.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="문제풀이용.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
