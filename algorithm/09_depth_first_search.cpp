@@ -7,7 +7,7 @@
 using namespace std;
 
 int num = 7; // 전체 노드 수
-int visited[7]; // 방문 체크용 배열
+int visited[8]; // 방문 체크용 배열. [0]은 미 사용
 vector<int> arr[8]; // 인접한 노드를 연결할 배열
 
 void dfs(int x) {
