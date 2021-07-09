@@ -15,10 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="07_counting_sort.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="문제풀이용.cpp">
+    <ClCompile Include="08_Breath_First_Search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

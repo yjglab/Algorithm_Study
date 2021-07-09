@@ -19,8 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="07_counting_sort.c" />
-    <ClCompile Include="문제풀이용.cpp" />
+    <ClCompile Include="08_Breath_First_Search.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
