@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="09_depth_first_search.cpp">
+    <ClCompile Include="10_union_find.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
