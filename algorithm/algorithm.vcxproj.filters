@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="12_dynamic_programming.c">
+    <ClCompile Include="문제풀이용.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
