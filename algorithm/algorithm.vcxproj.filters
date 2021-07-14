@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="문제풀이용.cpp">
+    <ClCompile Include="13_sieve_of_eratosthenes.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
