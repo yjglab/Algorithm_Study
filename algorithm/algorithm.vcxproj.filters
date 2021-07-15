@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="14_Dijkstra_algorithm_1.cpp">
+    <ClCompile Include="14-1_Dijkstra_algorithm_2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
