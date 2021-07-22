@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="17_strongly_connected_component.cpp">
+    <ClCompile Include="18_network_flow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
