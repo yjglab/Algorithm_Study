@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="22_knuth_morris_pratt.cpp">
+    <ClCompile Include="23_rabin_karp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
