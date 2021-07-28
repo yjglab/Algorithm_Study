@@ -1,70 +1,41 @@
+
 #include <iostream>
-#include <queue>
 #include <vector>
-#define MAX 10001
+#define MAX 201
+
 using namespace std;
+vector<int> cow[MAX];
+int house[MAX];
+bool done[MAX];
+int n, m, s;
 
-class Data {
-public:
-	int vtx;
-	int mtime;
-	Data(int vtx, int mtime) {
-		this->vtx = vtx;
-		this->mtime = mtime;
-	}
-};
-
-int n, sv, ev;
-int inDegree[MAX], result[MAX], done[MAX];
-vector<Data> a[MAX]; // sv -> ev : a
-vector<Data> b[MAX]; // ev -> sv : b
-
-void topologySort() {
-	queue<int> q;
-	q.push(sv);
-	while (!q.empty()) {
-		int x = q.front();
-		q.pop();
-		for (int i = 0; i < a[x].size(); i++) {
-			Data d = Data(a[x][i].vtx, a[x][i].mtime);
-			if (result[d.vtx] <= d.mtime + result[x]) {
-				result[d.vtx] = d.mtime + result[x];
-			}
-			if (--inDegree[d.vtx] == 0) {
-				q.push(d.vtx);
-			}
+bool dfs(int x) {
+	for (int i = 0; i < cow[x].size(); i++) {
+		int t = cow[x][i];
+		if (done[t]) continue;
+		done[t] = true;
+		if (house[t] == 0 || dfs(house[t])) {
+			house[t] = x;
+			return true;
 		}
 	}
-	int count = 0;
-	q.push(ev);
-	while (!q.empty()) {
-		int y = q.front();
-		q.pop();
-		for (int i = 0; i < b[y].size(); i++) {
-			Data d2 = Data(b[y][i].vtx, b[y][i].mtime);
-			if (result[y] - result[d2.vtx] == d2.mtime) {
-				count++;
-				if (done[d2.vtx] == 0) {
-					q.push(d2.vtx);
-					done[d2.vtx] = 1;
-				}
-			}
-		}
-	}
-	printf("%d\n%d", result[ev], count);
+	return false;
 }
-
-
 int main() {
-	int m; 
 	scanf_s("%d %d", &n, &m);
-	for (int i = 0; i < m; i++) {
-		int stt, end, tim;
-		scanf_s("%d %d %d", &stt, &end, &tim);
-		a[stt].push_back(Data(end, tim));
-		b[end].push_back(Data(stt, tim));
-		inDegree[end]++;
+	for (int i = 1; i <= n; i++) {
+		scanf_s("%d", &s);
+		for (int j = 1; j <= s; j++) {
+			int t;
+			scanf_s("%d", &t);
+			cow[i].push_back(t);
+		}
 	}
-	scanf_s("%d %d", &sv, &ev);
-	topologySort();
+	int cnt = 0;
+	for (int i = 1; i <= n; i++) {
+		fill(done, done + MAX, false);
+		if (dfs(i)) cnt++;
+	}
+	printf("%d\n", cnt);
+	
 }
